@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Résultats de Vols - AirTravel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 0px 10%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #29d9d5;
+}
+
+header .logo a span {
+    color: #222;
+}
+
+.search-results {
+    padding: 4px 10%;
+}
+
+.search-results h2 {
+    color: #191919;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.flight-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.flight-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.flight-info h3 {
+    font-size: 1.9rem;
+    margin-bottom: 5px;
+    color: #191919;
+}
+
+.flight-info p {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 2px 0;
+}
+
+.flight-options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.flight-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.flight-price {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #191919;
+    margin-bottom: 10px;
+}
+
+.flight-card button {
+    padding: 10px 25px;
+    border: none;
+    background-color: #0036e8;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flight-card button:hover {
+    background-color: #103fd6;
+}
+
+/* Responsive */
+@media (max-width: 750px){
+    .flight-top {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+            <a href="index.html" style="color: blue; font-weight: 600;"> Air Compagnie</a>
+        </div>
+</header>
+
+<section class="search-results">
+    <h2>Résultats de votre recherche</h2>
+
+    <!-- Exemple de carte de vol -->
+    <div class="flight-card">
+        <div class="flight-top">
+            <div class="flight-info">
+                <h3>Kinshasa → Lubumbashi</h3>
+                <p>Départ: 15 Mars 2026, 10:00</p>
+                <p>Arrivée: 15 Mars 2026, 18:00</p>
+                <p>Durée: 8h00</p>
+            </div>
+
+            <div class="flight-price" id="price1">€750</div>
+        </div>
+
+        <div class="flight-options">
+            <label>
+                <input type="radio" name="class1" value="eco" checked>
+                Économique
+            </label>
+            <label>
+                <input type="radio" name="class1" value="business">
+                Affaires
+            </label>
+        </div>
+
+        <button>Réserver</button>
+    </div>
+
+    <div class="flight-card">
+        <div class="flight-top">
+            <div class="flight-info">
+                <h3>Kinshasa → Lubumbashi</h3>
+                <p>Départ : 15 Mars 2026, 14:00</p>
+                <p>Arrivée : 15 Mars 2026, 22:00</p>
+                <p>Durée: 8h00</p>
+            </div>
+
+            <div class="flight-price" id="price2">€680</div>
+        </div>
+
+        <div class="flight-options">
+            <label>
+                <input type="radio" name="class2" value="eco" checked>
+                Économique
+            </label>
+            <label>
+                <input type="radio" name="class2" value="business">
+                Affaires
+            </label>
+        </div>
+
+        <button>Réserver</button>
+    </div>
+
+    <div class="flight-card">
+        <div class="flight-top">
+            <div class="flight-info">
+                <h3>Kinshasa → Lubumbashi</h3>
+                <p>Départ: 15 Mars 2026, 18:00</p>
+                <p>Arrivée: 16 Mars 2026, 02:00</p>
+                <p>Durée: 8h00</p>
+            </div>
+
+            <div class="flight-price" id="price3">€720</div>
+        </div>
+
+        <div class="flight-options">
+            <label>
+                <input type="radio" name="class3" value="eco" checked>
+                Économique
+            </label>
+            <label>
+                <input type="radio" name="class3" value="business">
+                Affaires
+            </label>
+        </div>
+
+        <button>Réserver</button>
+    </div>
+
+</section>
+
+<script>
+// Prix dynamique selon la classe choisie
+const flights = [
+    {id: 'price1', eco: 750, business: 1200},
+    {id: 'price2', eco: 680, business: 1100},
+    {id: 'price3', eco: 720, business: 1150},
+];
+
+flights.forEach((flight, index) => {
+    const radios = document.getElementsByName('class' + (index+1));
+    radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            document.getElementById(flight.id).innerText = '€' + flight[radio.value];
+        });
+    });
+});
+</script>
+
+</body>
+</html>

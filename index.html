@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Compagnie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="index.html" style="color: blue; font-weight: 600;"> Air Compagnie</a>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Acceuil</a></li>
+            <li><a href="#a-propos">A propos</a></li>
+            <li><a href="#popular-destination">Destinations</a></li>
+            <li><a href="#"><span style="font-weight: 600;">Se connecter</span></a></li>
+        </ul>
+        <a href="#" class="btn-reservation">Réserver Maintenant</a>
+
+        <div class="responsive-menu"></div>
+    </header>
+    <!-- acceuil section -->
+    <section id="home">
+        <h4>Voyager en Confort, Arriver en Sérénité</h4>
+        <p>Profitez de services attentifs, d’un environnement relaxant à bord, et d’une expérience de vol pensée pour que chaque étape de votre trajet soit simple et agréable.</p>
+        <a href="#" class="btn-reservation home-btn">Réserver Maintenant</a>
+        <div class="find_trip">
+    <form action="search-results.html" method="GET">
+        <div>
+            <label>Départ</label>
+            <input type="text" name="from" placeholder="Ville" required>
+        </div>
+        <div>
+            <label>Arrivée</label>
+            <input type="text" name="to" placeholder="Ville" required>
+        </div>
+        <div>
+            <label>Date Aller</label>
+            <input type="date" name="departure" required>
+        </div>
+        <div>
+            <label>Date Retour</label>
+            <input type="date" name="return">
+        </div>
+        <div>
+            <label>Passagers</label>
+            <input type="number" name="passengers" min="1" value="1" required>
+        </div>
+        <input type="submit" value="Rechercher des vols">
+    </form>
+</div>
+    </section>
+
+    <section id="a-propos">
+    <h1 class="title">À propos</h1>
+
+    <!-- Première carte -->
+    <div class="about-card">
+        <div class="about-text">
+            <h3>Confort et Bien-être à Bord</h3>
+            <p>
+                Chez Air Compagnie, votre confort est notre priorité. Nos avions sont équipés de sièges ergonomiques et spacieux, 
+                offrant un espace optimal pour que chaque voyage soit agréable. Nous proposons également des services premium 
+                tels que des oreillers, couvertures, et un système de divertissement complet pour que chaque instant de votre vol 
+                soit relaxant et plaisant. Profitez d'une atmosphère calme et accueillante, idéale pour se détendre ou travailler pendant votre trajet.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1558576996-06304651ef63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVzc2V8ZW58MHx8MHx8fDA%3D" alt="Voyage Image 1">
+        </div>
+    </div>
+
+    <!-- Deuxième carte -->
+    <div class="about-card">
+        <div class="about-text">
+            <h3>Accueil et Sécurité avant Tout</h3>
+            <p>
+                Votre sécurité est notre engagement le plus important. Nous suivons des protocoles stricts et un contrôle rigoureux 
+                pour assurer un vol sûr et fiable. Notre personnel est formé pour vous offrir un accueil chaleureux et vous assister 
+                à chaque étape de votre voyage. Des procédures d'embarquement claires, un suivi sanitaire rigoureux et une communication 
+                transparente garantissent que vous voyagez en toute sérénité, tout en bénéficiant d'un service attentionné et professionnel.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="https://plus.unsplash.com/premium_photo-1661962461974-8d80815a75c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZXNzZSUyMGRlJTIwbCdhaXJ8ZW58MHx8MHx8fDA%3D" alt="Voyage Image 2">
+        </div>
+    </div>
+</section>
+
+    <!-- section destination -->
+    <section id="popular-destination">
+        <h1 class="title">destinations populaires</h1>
+        <div class="content">
+            <div class="box">
+                <img src="images/kinshasa.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Kinshasa</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/lushi.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Lubumbashi</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/joa.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Johannesburg</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- box -->
+            <div class="box">
+                <img src="images/paris.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Paris</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+            <!-- box -->
+            <div class="box">
+                <img src="images/miami.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Miami</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+             <!-- box -->
+             <div class="box">
+                <img src="images/los-angeles.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Los-Angeles</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+        </div>
+    </section>
+
+    <footer>
+    <div class="footer-container">
+        <!-- Contact -->
+        <div class="footer-section contact">
+            <h4>Contact</h4>
+            <p>Email: contact@aircompagnie.com</p>
+            <p>Téléphone: +243 99 123 4567</p>
+            <p>Adresse: Kinshasa, RDC</p>
+        </div>
+
+        <!-- Menu rapide -->
+        <div class="footer-section menu-footer">
+            <h4>Liens rapides</h4>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#popular-destination">Destinations</a></li>
+            </ul>
+        </div>
+
+        <!-- À propos / réseaux sociaux -->
+        <div class="footer-section about-footer">
+            <h4>À propos</h4>
+            <p>AirTravel vous offre des voyages confortables et sécurisés partout dans le monde. Suivez-nous sur les réseaux sociaux pour ne rien manquer.</p>
+            <div class="socials">
+                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/logo (2).svg" alt="WhatsApp"></a>
+                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Air Compagnie. Tous droits réservés.</p>
+    </div>
+</footer>
+
+
+    <script>
+        var toggle_menu = document.querySelector('.responsive-menu');
+        var menu = document.querySelector('.menu');
+        toggle_menu.onclick= function(){
+             toggle_menu.classList.toggle('active');
+             menu.classList.toggle('responsive')
+        }
+    </script>
+
+    <script>
+document.getElementById('flight-form').addEventListener('submit', function(e){
+    e.preventDefault(); // Empêche le reload de la page
+
+    // Récupération des valeurs
+    const origin = document.getElementById('origin').value;
+    const destination = document.getElementById('destination').value;
+    const departDate = document.getElementById('depart-date').value;
+    const returnDate = document.getElementById('return-date').value || 'N/A';
+    const passengers = document.getElementById('passengers').value;
+    const flightClass = document.getElementById('flight-class').value;
+
+    // Simuler des résultats
+    const resultsDiv = document.getElementById('flight-results');
+    resultsDiv.innerHTML = `
+        <h3>Résultats pour votre vol :</h3>
+        <ul>
+            <li>Origine : ${origin}</li>
+            <li>Destination : ${destination}</li>
+            <li>Date de départ : ${departDate}</li>
+            <li>Date de retour : ${returnDate}</li>
+            <li>Passagers : ${passengers}</li>
+            <li>Classe : ${flightClass}</li>
+        </ul>
+        <button onclick="alert('Réservation simulée !')">Réserver Maintenant</button>
+    `;
+});
+</script>
+
+
+</body>
+</html>
